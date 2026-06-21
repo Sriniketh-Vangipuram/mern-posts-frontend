@@ -1,5 +1,3 @@
-# README.md
-
 # MERN Posts App
 
 A full-stack MERN application that allows users to create, view, and delete posts with image uploads.
