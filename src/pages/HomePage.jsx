@@ -56,19 +56,41 @@ function HomePage(){
     }
 
     if(loading){
-        return <h1>Loading...</h1>;
+        return (
+            <div className="text-center mt-20">
+                <h1 className="text-3xl font-bold">
+                    Loading posts ...
+                </h1>
+            </div>
+        )
     }
 
     if(error){
         return <h1>{error}</h1>;
     }
     return (
-        <div>
-            <h1>Posts</h1>
-            <PostForm onAddPost={handleAddPost}/>
-            <br/>
-            <PostList posts={posts} onDelete={handleDelete}/>
-        </div>
+        <div className="max-w-5xl mx-auto px-5 py-10">
+
+        <div className="text-center mb-10">
+
+        <h1 className="text-5xl font-bold text-blue-500">
+            MERN Posts 
+        </h1>
+
+        <p className="text-slate-400 mt-3">
+            Share your thoughts with everyone
+        </p>    
+
+  </div>
+
+  <PostForm onAddPost={handleAddPost}/>
+
+  <PostList
+    posts={posts}
+    onDelete={handleDelete}
+  />
+
+</div>
     )
 }
 

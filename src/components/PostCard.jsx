@@ -5,34 +5,33 @@ function PostCard({
 
   console.log(post);
   return (
-    <div
-      style={{
-        border: "1px solid gray",
-        padding: "20px",
-        marginBottom: "20px"
-      }}
-    >
-      <h2>{post.title}</h2>
-
-      <p>{post.content}</p>
+    <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl mb-8">
 
       {post.imageUrl && (
         <img  
          src={post.imageUrl}
          alt={post.title}
          width="200"
+         className="w-full h-72 object-cover"
         />
       )}
 
-      <br/>
+      <div className="p-6">
+        <h2 className="text-2xl font-bold mb-3">
+          {post.title}
+        </h2>
 
-      <button
-        onClick={() =>
-          onDelete(post._id)
-        }
-      >
-        Delete
-      </button>
+        <p className="text-slate-400 leading-7">
+          {post.content}
+        </p>
+
+        <button onClick={()=>onDelete(post._id)}
+          className="mt-6 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-xl transition"
+          >
+            Delete
+          
+          </button>
+      </div>
 
     </div>
   );
