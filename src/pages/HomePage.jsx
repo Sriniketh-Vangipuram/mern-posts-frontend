@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import PostList from "../components/PostList";
-import PostForm from "../components/postForm";
+import PostForm from "../components/PostForm";
 import {getPosts,createPost,deletePost} from "../api/postApi";
 
 function HomePage(){
