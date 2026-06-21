@@ -10,7 +10,7 @@ https://mern-posts-frontend-seven.vercel.app/
 
 Backend API
 
-https://mern-posts-backend.onrender.com
+https://mern-posts-backend.onrender.com/posts
 
 Backend Repository
 
